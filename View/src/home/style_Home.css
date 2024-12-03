@@ -1,0 +1,324 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 64px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 16px;
+}
+
+.logo {
+    height: 24px;
+}
+
+.create-button {
+    display: flex;
+    align-items: center;
+    background-color: #065fd4;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 16px;
+
+}
+
+.create-button i {
+    margin-right: 8px;
+}
+
+.header-right i {
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #065fd4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 64px);
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e5e5;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #f2f2f2;
+}
+
+.sidebar li.active {
+    background-color: #e5e5e5;
+}
+
+.sidebar li i {
+    margin-right: 24px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.thumbnail {
+    width: 200px;
+    height: auto;
+}
+.video-content {
+    margin-left: 30px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-direction:column;
+    width: 60%;
+}
+.video-info {
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction:column;
+    position: relative;
+}
+
+/* From Uiverse.io by Codecite */ 
+.start-tracking {
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 21px;
+    text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 25px;
+    color: #fff;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-gradient-0) 0%,
+      var(--fancy-button-gradient-50) 50%,
+      var(--fancy-button-gradient-100) 100%
+    );
+    box-shadow:
+      0px 4px 12px rgba(9, 12, 60, 0.15),
+      0px 2px 8px rgba(9, 12, 60, 0.15),
+      0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+      inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+      inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+  }
+  
+  .start-tracking:before,
+  .start-tracking:after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    will-change: transform;
+  }
+  
+  .start-tracking:before {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--fancy-button-shine-top);
+    width: 96px;
+    height: 6px;
+    top: -3px;
+    opacity: 0.6;
+    filter: blur(6px);
+    transition: opacity 0.25s;
+  }
+  
+  .start-tracking:after {
+    inset: 0;
+    background-size: cover;
+    z-index: 2;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  
+  .start-tracking span {
+    display: block;
+    padding: 12px 24px;
+    border-radius: inherit;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-shine-top),
+      transparent 8px
+    );
+    background-position: 0 -6px;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  .start-tracking span:before,
+  .start-tracking span:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--fancy-button-shine-bottom);
+    transition:
+      opacity 0.25s,
+      transform 0.25s;
+    will-change: transform;
+  }
+  
+  .start-tracking span:before {
+    width: 92px;
+    height: 8px;
+    bottom: -4px;
+    opacity: 0.75;
+    filter: blur(6px);
+  }
+  
+  .start-tracking span:after {
+    width: 112px;
+    height: 1px;
+    bottom: 0;
+    opacity: 0.9;
+    filter: blur(1px);
+  }
+  
+  .start-tracking:hover span:before {
+    opacity: 0.8;
+  }
+  
+  .start-tracking:hover span:before {
+    transform: translateX(-50%) scale(1.25);
+  }
+  
+  .start-tracking:hover span:after {
+    opacity: 1;
+  }
+
+  main::-webkit-scrollbar {
+    width: 12px; 
+    border-radius: 10px; 
+  }
+  main::-webkit-scrollbar-track {
+    background: #e9eaeb; 
+    border-radius: 10px;
+  }
+  main::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #87cefa 0%, rgba(20, 103, 235, 0) 80%);
+    border-radius: 10px;
+  }
+  main::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, #6495ed 0%, rgba(97, 85, 220, 0.5) 80%);
+  }
+  

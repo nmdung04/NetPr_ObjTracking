@@ -3,57 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
-    <link rel="stylesheet" href="styleHome.css">
+    <title>Object Tracking</title>
+    <link rel="stylesheet" href="style_Home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://apis.google.com/js/api.js"></script>
+    
 </head>
 <body>
-<main>
-    <div class="login-card">
-        <div class="login-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M15 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H15C16.1046 21 17 20.1046 17 19V5C17 3.89543 16.1046 3 15 3Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M11 8L13 10L11 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+    <header>
+        <div class="header-left">
+            <button class="menu-button"><i class="material-icons">menu</i></button>
+            <img src="https://www.gstatic.com/youtube/img/creator/yt_studio_logo.png" alt="O-Tracking" class="logo">
         </div>
-        <h1>Sign in with email</h1>
-        <p class="subtitle">Make a new doc to bring your words, data,<br>and teams together. For free</p>
-
-        <form class="login-form">
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <div class="password-input">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                    <button type="button" class="toggle-password">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" stroke-width="1.5"/>
-                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke-width="1.5"/>
-                        </svg>
-                    </button>
+        <div class="header-right">
+            <button class="create-button"><i class="material-icons">video_call</i> CREATE</button>
+            <i class="material-icons">help_outline</i>
+            <i class="material-icons">notifications</i>
+            <div class="user-avatar">A</div>
+        </div>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li class="active"><i class="material-icons">dashboard</i> Dashboard</li>
+                <li><i class="material-icons">content_copy</i> Content</li>
+                <li><i class="material-icons">analytics</i> Analytics</li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h1>Overview</h1>
+            <div class="dashboard-grid">
+                <div class="card" data-video-id="dQw4w9WgXcQ">
+                    <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="Video Thumbnail" class="thumbnail">
+                    <div class="video-content">
+                        <h2 class="video-title">Video Title</h2>
+                        <p class="video-description">Description</p>
+                    </div>
+                    <div class="video-tracking">
+                        <button class="start-tracking">Start Tracking</button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-video-id="9bZkp7q19f0">
+                    <img src="https://img.youtube.com/vi/9bZkp7q19f0/0.jpg" alt="Video Thumbnail" class="thumbnail">
+                    <div class="video-content">
+                        <h2 class="video-title">Vieo Title</h2>
+                        <p class="video-description">Description</p>
+                    </div>
+                    <div class="video-tracking">
+                        <button class="start-tracking">Start Tracking</button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-video-id="kJQP7kiw5Fk">
+                    <img src="https://img.youtube.com/vi/kJQP7kiw5Fk/0.jpg" alt="Video Thumbnail" class="thumbnail">
+                    <div class="video-content">
+                        <h2 class="video-title">Video Title</h2>
+                        <p class="video-description">Description</p>
+                    </div>
+                    <div class="video-tracking">
+                        <button class="start-tracking">Start Tracking</button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-links">
-                <a href="#" class="forgot-password">Forgot password?</a>
-            </div>
-            <button type="submit" class="login-button">Get Started</button>
-        </form>
+        </main>
+    </div>
 
-        <div class="social-login">
-            <p>Or sign in with</p>
-            <div class="social-buttons">
-                <button class="social-button">
-                    <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20">
-                </button>
-                <button class="social-button">
-                    <img src="https://www.facebook.com/favicon.ico" alt="Facebook" width="20" height="20">
-                </button>
-                <button class="social-button">
-                    <img src="https://www.apple.com/favicon.ico" alt="Apple" width="20" height="20">
-                </button>
-            </div>
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="videoIframe" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+           
         </div>
     </div>
-</main>
+
+    <script src="home.js"></script>
 </body>
 </html>
